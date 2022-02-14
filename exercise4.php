@@ -22,13 +22,18 @@ $courses1=array("PHP", "HTML", "JavaScript", "CMS", "Project");
 */
 
 echo "Task 2 ";
-$courses1=array("PHP", "HTML", "JavaScript", "CMS", "Project");
-unset($courses1[1]); 
-$lcourses1 = count($courses1);
-for ($i-0; $i<$lcourses1+1; $i++)
+$courses1=array ("PHP", "HTML", "JavaScript", "CMS", "Project");
+foreach($courses1 as $i)
 {
-    echo "$courses1[$i]\n";
+    echo $i . "<br>";
 }
+
+echo "<br>New array after deleting an element<br>";
+unset ($courses1[2]);
+foreach ($courses1 as $i){
+echo $i . "<br>";
+}
+
 echo "<br>";
 
 /* 
@@ -172,3 +177,4 @@ echo $temp_array[$i].", ";
 
 
 ?>
+
